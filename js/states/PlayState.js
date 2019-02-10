@@ -70,16 +70,16 @@ class PlayState extends Phaser.State {
 
   onHitBonfire(plumber, bonfire) {
     console.log(`${(plumber.game.time.now / 1000).toFixed(1)}s: Plumber touches bonfire and dies.`);
-    game.state.start('PlayState');
+    this.game.state.start('PlayState');
   }
 
   onHitGorilla(plumber, gorilla) {
     alert(`${(plumber.game.time.now / 1000).toFixed(1)}s: Plumber wins!`);
-    game.state.start('PlayState');
+    this.game.state.start('PlayState');
   }
 
   onHitBarrel(plumber, barrel) {
     console.log(`${(plumber.game.time.now / 1000).toFixed(1)}s: Plumber touches barrel and dies.`);
-    game.state.start('PlayState');
+    this.game.state.start('PlayState');
   }
 }
